@@ -1,9 +1,9 @@
 server:
-  port: 8088
+  port: 8080
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: discovery
   client:
     registerWithEureka: false
     fetchRegistry: false

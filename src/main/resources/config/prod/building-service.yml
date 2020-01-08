@@ -1,10 +1,10 @@
 server:
-  port: 8088
+  port: 8080
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery:8088/eureka/
+      defaultZone: http://discovery:8080/eureka/
 
 logging:
   pattern:
