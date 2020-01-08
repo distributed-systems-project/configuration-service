@@ -15,6 +15,10 @@ zuul:
     buildings:
       path: /building/**
       serviceId: building-service
+    login:
+      path: /login
+      serviceId: employee-service
+      ​sensitiveHeaders: Cookie,Set-Cookie
     employee:
       path: /employee/**
       serviceId: employee-service
