@@ -1,0 +1,27 @@
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+              
+zuul:
+  routes:
+    buildings:
+      path: /building/**
+      serviceId: building-service
+    login:
+      path: /login
+      serviceId: employee-service
+      ​sensitiveHeaders: Cookie,Set-Cookie
+    employee:
+      path: /employee/**
+      serviceId: employee-service
+    reservation:
+      path: /reservation/**
+      serviceId: reservation-service
