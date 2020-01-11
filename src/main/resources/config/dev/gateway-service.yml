@@ -19,6 +19,10 @@ zuul:
       path: /login
       serviceId: employee-service
       ​sensitiveHeaders: Cookie,Set-Cookie
+    customerLogin:
+      path: /customer/login
+      serviceId: reservation-service
+      ​sensitiveHeaders: Cookie,Set-Cookie
     employee:
       path: /employee/**
       serviceId: employee-service
